@@ -72,9 +72,14 @@ pcm.!default
 }
 
 ctl.!default {
-	type bluealsa
-}
-    capture.pcm 
+{
+    type asym
+    playback.pcm
+    {
+        type plug
+        slave.pcm "internal"
+    }
+    capture.pcm
     {
         type plug
         slave.pcm "cap"
