@@ -71,14 +71,9 @@ pcm.!default
     }
 }
 
-ctl.!default
-{
-    type asym
-    playback.pcm
-    {
-        type plug
-        slave.pcm "internal"
-    }
+ctl.!default {
+	type bluealsa
+}
     capture.pcm 
     {
         type plug
