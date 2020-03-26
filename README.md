@@ -3,3 +3,15 @@
 2. aplay test.play #play with default pcm  
 3. aplay -D mid test.play #play with mid pcm (output sound to bluetooth speakers)  
 4. sudo cp ~/asoundrc /etc/asound.conf #create permanent settings alsa  
+
+$ pactl list modules | grep blue  
+	Name: module-bluetooth-policy  
+	Name: module-bluetooth-discover  
+	Name: module-bluez5-discover  
+	Name: module-bluez5-device  
+  
+$ pactl unload-module module-bluez5-discover  
+  
+$ pactl list modules | grep blue  
+	Name: module-bluetooth-policy  
+	Name: module-bluetooth-discover  
