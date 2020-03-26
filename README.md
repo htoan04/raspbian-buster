@@ -15,3 +15,6 @@ $ pactl unload-module module-bluez5-discover
 $ pactl list modules | grep blue  
 	Name: module-bluetooth-policy  
 	Name: module-bluetooth-discover  
+	
+#mplayer commands play movie on hdmi + bluetooth speaker  
+mplayer -adapter 1 -ao alsa:device=bluealsa video1.avi  
